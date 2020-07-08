@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         final Button buttonRightToLeft2 = findViewById(R.id.moving_right_to_left_button2);
         final Button buttonLeftToRight1 = findViewById(R.id.moving_left_to_right_button1);
         final Button buttonLeftToRight2 = findViewById(R.id.moving_left_to_right_button2);
+        final Button moveToBlankActivity = findViewById(R.id.move_to_blank_activity);
 
         buttonRightToLeft1.setOnClickListener(view -> {
             Animation anim = AnimationUtils.loadAnimation(this, R.anim.slide_in_left);
@@ -78,6 +79,12 @@ public class MainActivity extends AppCompatActivity {
         buttonLeftToRight2.setOnClickListener(view -> {
             Animation anim = AnimationUtils.loadAnimation(this, R.anim.slide_out_right);
             view.startAnimation(anim);
+        });
+
+        moveToBlankActivity.setOnClickListener(view -> {
+            Intent intent = new Intent(this, BlankActivity.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_out_up, R.anim.fade_in);
         });
     }
 }
