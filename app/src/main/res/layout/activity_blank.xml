@@ -6,4 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".BlankActivity">
 
+    <androidx.slidingpanelayout.widget.SlidingPaneLayout
+        android:id="@+id/sliding_pane"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text_view_inside_sliding_pane"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/colorPrimary"
+            android:text="Opened sliding pane"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_view2_inside_sliding_pane"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Closed sliding pane"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+    </androidx.slidingpanelayout.widget.SlidingPaneLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
